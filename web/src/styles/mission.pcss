@@ -1,0 +1,32 @@
+.mission {
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 5px;
+    animation: fadeIn 0.5s linear;
+    animation-fill-mode: both;
+  }
+  @for $i from 1 to 5 {
+    li:nth-child($(i)) {
+      animation-delay: calc(0.75 * $(i))s;
+    }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
