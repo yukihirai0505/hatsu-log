@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { getProperty } from './props'
-import { tweetSheet, savedTweets } from './spreadsheet'
+import { tweetSheet, getSavedTweets } from './spreadsheet'
 
 const getTwitterService = () =>
   OAuth1.createService('Twitter')
@@ -24,6 +24,7 @@ const extractHashTags = text => {
 }
 
 export const saveDailyTweets = () => {
+  const savedTweets = getSavedTweets(1)
   const sinceId = tweetSheet.getRange(savedTweets.length, 1).getValue()
   const sinceIdParam = sinceId ? `&since_id=${sinceId}` : ''
   const res = twitterService.fetch(

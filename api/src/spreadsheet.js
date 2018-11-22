@@ -2,7 +2,7 @@ const bk = SpreadsheetApp.getActiveSpreadsheet()
 export const tweetSheet = bk.getSheetByName('tweet')
 export const storeSheet = bk.getSheetByName('store')
 
-export const savedTweets = column =>
+export const getSavedTweets = column =>
   tweetSheet
     .getRange(2, 1, tweetSheet.getLastRow(), column)
     .getValues()
