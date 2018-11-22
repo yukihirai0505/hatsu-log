@@ -9,7 +9,7 @@ export const doGet = e => {
     const id = tweet[0]
     const tweetLink = tweet[1]
     const hashtags = tweet[3]
-    const stores = savedStores.filter(store => store[0] === id).map(store => {
+    const stores = savedStores.filter(store => store[0] === id && store[4]).map(store => {
       const name = store[1]
       const lat = store[4]
       const lng = store[5]
