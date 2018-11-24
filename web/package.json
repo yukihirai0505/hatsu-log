@@ -2,10 +2,12 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yukihirai0505.github.io/hatsu-log",
+  "homepage": "https://stupefied-haibt-ff10b7.netlify.com",
   "dependencies": {
+    "leaflet": "^1.3.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-leaflet": "^2.1.2",
     "react-scripts": "2.1.0",
     "react-scroll": "^1.7.10",
     "semantic-ui-css": "^2.4.1",
