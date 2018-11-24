@@ -42,6 +42,11 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      centerPosition: {
+        lat: 35.6455172,
+        lng: 139.7118403,
+      },
+      zoom: 16,
       info: []
     }
   }
@@ -55,12 +60,12 @@ class App extends Component {
   }
 
   render() {
-    const { info } = this.state
+    const { centerPosition, zoom, info } = this.state
     return (
       <div>
         <Header as="h1" content="Hatsu Log" style={style.h1} textAlign="center"/>
         <Container>
-          <Map center={[35.6455172, 139.7118403]} zoom={12}>
+          <Map center={[centerPosition.lat, centerPosition.lng]} zoom={zoom}>
             <TileLayer
               attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -69,7 +74,8 @@ class App extends Component {
               return e.stores && e.stores.map((store, key) => {
                 return (<Marker key={key} position={[store.lat, store.lng]}>
                   <Popup>
-                    <TargetLink href={e.tweetLink} text={store.name}/>
+                    <TargetLink href={e.tweetLink} text={store.name}/> <br/>
+                    {e.hashtags}
                   </Popup>
                 </Marker>)
               })
