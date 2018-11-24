@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/hatsu-log/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "a4cadbf5e1fbabfd16a0",
-    "url": "/hatsu-log/static/js/main.a4cadbf5.chunk.js"
+    "revision": "bf1c005016a54742b963",
+    "url": "/hatsu-log/static/js/main.bf1c0050.chunk.js"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
@@ -24,16 +24,16 @@ self.__precacheManifest = [
     "url": "/hatsu-log/static/media/outline-icons.ef60a4f6.woff"
   },
   {
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/hatsu-log/static/media/flags.9c74e172.png"
+  },
+  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/hatsu-log/static/media/outline-icons.701ae6ab.eot"
   },
   {
     "revision": "ad97afd3337e8cda302d10ff5a4026b8",
     "url": "/hatsu-log/static/media/outline-icons.ad97afd3.ttf"
-  },
-  {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/hatsu-log/static/media/flags.9c74e172.png"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
@@ -72,15 +72,15 @@ self.__precacheManifest = [
     "url": "/hatsu-log/static/media/outline-icons.82f60bd0.svg"
   },
   {
-    "revision": "2ddf6b07d50064ede221",
-    "url": "/hatsu-log/static/js/1.2ddf6b07.chunk.js"
+    "revision": "da9ac9c622d09a4e2a1a",
+    "url": "/hatsu-log/static/js/1.da9ac9c6.chunk.js"
   },
   {
-    "revision": "2ddf6b07d50064ede221",
-    "url": "/hatsu-log/static/css/1.24aa6213.chunk.css"
+    "revision": "da9ac9c622d09a4e2a1a",
+    "url": "/hatsu-log/static/css/1.88618827.chunk.css"
   },
   {
-    "revision": "f0c052e38e4981fb8b11de957f3db55d",
+    "revision": "c64e7e13b543c3e285b2ce47dce6d280",
     "url": "/hatsu-log/index.html"
   }
 ];

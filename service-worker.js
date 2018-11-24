@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hatsu-log/precache-manifest.b9e68f6574d2d757be475aa2dc27441b.js"
+  "/hatsu-log/precache-manifest.1905451e62120d077eae7b3a3374402b.js"
 );
 
 workbox.clientsClaim();
