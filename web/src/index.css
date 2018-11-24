@@ -12,7 +12,7 @@ html, body {
 
 
 .leaflet-container {
-    width: 600px;
-    height: 300px;
+    width: 1200px;
+    height: 600px;
     margin: 10px;
 }
