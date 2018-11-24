@@ -1,20 +1,6 @@
-/* eslint-disable no-useless-constructor */
 import React, { Component } from 'react'
-import {
-  Button,
-  Container,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  Item,
-  Label,
-  Menu,
-  Segment,
-  Step,
-  Table
-} from 'semantic-ui-react'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Container, Dropdown, Header } from 'semantic-ui-react'
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import Leaflet from 'leaflet'
 import TargetLink from './atoms/TargetLink'
@@ -43,11 +29,19 @@ class App extends Component {
     super()
     this.state = {
       centerPosition: {
-        lat: 35.6455172,
-        lng: 139.7118403,
+        lat: 35.6467334,
+        lng: 139.7101065
       },
-      zoom: 16,
-      info: []
+      zoom: 17,
+      info: [],
+      data: {
+        active: 0,
+        options: [
+          { value: 0, text: 'Ebisu' },
+          { value: 1, text: 'Shibuya' },
+          { value: 2, text: 'Roppongi' }
+        ]
+      }
     }
   }
 
@@ -59,8 +53,37 @@ class App extends Component {
     this.setState({ info })
   }
 
+  onSelectChange(d, e) {
+    const { data } = this.state
+    data.active = e.value
+    let centerPosition
+    switch (e.value) {
+      case 0:
+        centerPosition = {
+          lat: 35.6467334,
+          lng: 139.7101065
+        }
+        break
+      case 1:
+        centerPosition = {
+          lat: 35.6580339,
+          lng: 139.7016358
+        }
+        break
+      case 2:
+        centerPosition = {
+          lat: 35.6628656,
+          lng: 139.7315065
+        }
+        break
+      default:
+        break
+    }
+    this.setState({ data, centerPosition })
+  }
+
   render() {
-    const { centerPosition, zoom, info } = this.state
+    const { centerPosition, zoom, info, data } = this.state
     return (
       <div>
         <Header as="h1" content="Hatsu Log" style={style.h1} textAlign="center"/>
@@ -81,6 +104,16 @@ class App extends Component {
               })
             })}
           </Map>
+          <Dropdown
+            label='area'
+            name='area'
+            selection
+            value={data.active}
+            width={4}
+            options={data.options}
+            style={{ marginTop: 20 }}
+            onChange={(d, e) => this.onSelectChange(d, e)}
+          />
         </Container>
       </div>
     )
