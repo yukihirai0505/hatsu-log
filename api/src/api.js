@@ -20,14 +20,11 @@ export const doGet = e => {
       }
     })
     return {
-      id,
       tweetLink,
       stores,
       hashtags
     }
   })
-  // TODO: get tweet
-  // TODO: get store
   output.setMimeType(ContentService.MimeType.JSON)
   output.setContent(JSON.stringify(content))
   return output

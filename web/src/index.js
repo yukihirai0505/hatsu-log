@@ -1,20 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faTimes, faChevronDown, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import {
-  faGithub
-} from '@fortawesome/free-brands-svg-icons'
+import 'semantic-ui-css/semantic.min.css'
 
 import * as serviceWorker from './serviceWorker'
 
-import './i18n'
-
-library.add(faBars, faTimes, faChevronDown, faExternalLinkAlt, faGithub)
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App/>, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
