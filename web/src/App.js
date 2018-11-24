@@ -88,6 +88,24 @@ class App extends Component {
       <div>
         <Header as="h1" content="Hatsu Log" style={style.h1} textAlign="center"/>
         <Container>
+          <Dropdown
+            label='area'
+            name='area'
+            selection
+            value={data.active}
+            width={4}
+            options={data.options}
+            style={{
+              margin: 20,
+              position: 'relative',
+              zIndex: 5,
+              display: 'block'
+            }}
+            onChange={(d, e) => this.onSelectChange(d, e)}
+          />
+        </Container>
+
+        <Container>
           <Map center={[centerPosition.lat, centerPosition.lng]} zoom={zoom}>
             <TileLayer
               attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
@@ -104,16 +122,6 @@ class App extends Component {
               })
             })}
           </Map>
-          <Dropdown
-            label='area'
-            name='area'
-            selection
-            value={data.active}
-            width={4}
-            options={data.options}
-            style={{ marginTop: 20 }}
-            onChange={(d, e) => this.onSelectChange(d, e)}
-          />
         </Container>
       </div>
     )
